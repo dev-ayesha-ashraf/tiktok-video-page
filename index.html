@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>TikTok-like Video Page</title>
+</head>
+<body>
+    <div class="video-slider">
+        <div class="video-slide">
+            <video class="hero__video" type="video/mp4" poster="https://www.pepsi.com/en-us/refresh082123/media/LoadVideo_1920.png" src="https://www.pepsi.com/en-us/refresh082123/media/PEPSI_2023_PR_Sizzle_1920px_trimmed.mp4" muted loop playsinline></video>
+        </div>
+        <div class="video-slide">
+            <video class="hero__video" type="video/mp4"  poster="https://www.pepsi.com/en-us/refresh082123/media/LoadVideo_1920.png" src=https://www.pepsi.com/en-us/refresh082123/media/Titan_TR_Digital_30_PETD3091000H_CreativeX_sm.mp4 muted loop playsinline></video>
+        </div>
+        <!-- Add more video slides here if needed -->
+    </div>
+
+        <!-- Add more video slides here if needed -->
+    <div class="overlay">
+        <div class="top-bar">
+            <button class="button">Live</button>
+            <span class="search-icon"><i class="bi bi-search"></i></span>
+        </div>
+        <div class="bottom-bar">
+            <div class="user-info">
+                
+                <div class="user-actions">
+                    <img src="./th.jpeg" alt="Avatar" class="avatar">
+                    <button class="action-button like" onclick="toggleLike()"><i class="bi bi-heart-fill"></i></button>
+                    <button class="action-button comment" onclick="toggleCommentSection()">
+                        <i class="bi bi-chat-left-text-fill"></i>
+                    </button>
+                    <div class="comment-section" id="commentSection">
+                        <button class="close-button" onclick="toggleCommentSection()">&times;</button> <!-- Close button -->
+                        <div class="comment-container">
+                            <input type="text" placeholder="Add a comment..." id="commentInput">
+                            <button onclick="addComment()">Post</button>
+                        </div>
+                        <div id="commentsContainer"></div>
+                    </div>
+                    <button class="action-button save" id="saveButton"><i class="bi bi-download"></i></button>
+                    <button class="action-button share" id="shareButton"><i class="bi bi-share-fill"></i></button>
+                </div>
+            </div>
+            <div class="post-info">
+                <h1 class="username">Username</h1>
+                <p class="description">Post Description</p>
+            </div>
+            <div class="bottom-nav">
+                <button class="nav-icon home"><i class="bi bi-house"></i></button>
+                <button class="nav-icon inbox"><i class="bi bi-card-list"></i></button>
+                <button class="nav-icon friends"><i class="bi bi-person-circle"></i></button>
+                <button class="nav-icon friends"><i class="bi bi-newspaper"></i></button>
+
+            </div>
+        </div>
+        <button class="nav-button prev">&#10094;</button>
+        <button class="nav-button next">&#10095;</button>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
